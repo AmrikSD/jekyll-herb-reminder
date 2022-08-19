@@ -6,8 +6,6 @@ import com.google.inject.Provides;
 import java.util.Arrays;
 
 import javax.inject.Inject;
-import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.Client;
 import net.runelite.api.Item;
 import net.runelite.api.ItemID;
 import net.runelite.api.events.ItemContainerChanged;
@@ -49,8 +47,7 @@ public class JekyllHerbReminderPlugin extends Plugin {
 
 	@Subscribe
 	public void onItemContainerChanged(ItemContainerChanged itemContainerChanged) {
-		if (itemContainerChanged.getContainerId() != INVENTORY_ID
-				|| config.rewardWantedType() == RewardWantedType.DEFAULT) {
+		if (itemContainerChanged.getContainerId() != INVENTORY_ID || config.rewardWantedType() == RewardWantedType.DEFAULT) {
 			return;
 		}
 
