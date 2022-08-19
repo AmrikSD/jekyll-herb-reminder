@@ -34,7 +34,7 @@ public interface JekyllHerbReminderConfig extends Config {
 		}
 	}
 
-	@ConfigItem(keyName = "rewardWanted", name = "Jekyll & Hyde Reward", description = "Configures reward you wish to get from Jekyll & Hyde.")
+	@ConfigItem(keyName = "rewardWanted", name = "Reward", description = "Configures reward you wish to get from Jekyll & Hyde.")
 	default RewardWantedType rewardWantedType() {
 		return RewardWantedType.DEFAULT;
 	}
